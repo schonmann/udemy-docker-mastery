@@ -48,11 +48,7 @@ COPY package.json package.json
 RUN npm install \
     && npm cache clean --force
 
-COPY public /usr/src/app/public
-COPY routes /usr/src/app/routes
-COPY app.js /usr/src/app/app.js
-COPY views /usr/src/app/views
-COPY bin /usr/src/app/bin
+COPY . .
 
 EXPOSE 3000
 
